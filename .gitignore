@@ -1,6 +1,13 @@
 # macOS
 .DS_Store
 
+Pods/
+Pods
+Podfile.lock
+/.DS_Store
+Podfile.lock
+/Podfile.lock
+
 # Xcode
 build/
 *.pbxuser
