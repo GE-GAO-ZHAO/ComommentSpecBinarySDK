@@ -6,6 +6,10 @@
 #  Created by 葛高召 on 2022/1/6.
 #  Copyright © 2022 葛高召. All rights reserved.
 
+#输出相应参数
+echo "😄😄😄😄😄😄😄😄已经进入pod源码的根目录😄😄😄😄😄😄😄😄"
+
+
 # 当前项目名字，需要修改！
 PROJECT_NAME='ABC'
 

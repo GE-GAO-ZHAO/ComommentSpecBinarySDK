@@ -3,7 +3,7 @@ use_frameworks!
 platform :ios, '9.0'
 
 target 'ABC_Example' do
-  pod 'ABC', :path => '../'
+  pod "ABC", :path => "../"
 
   target 'ABC_Tests' do
     inherit! :search_paths
