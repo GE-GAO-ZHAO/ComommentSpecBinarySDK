@@ -9,4 +9,8 @@
 
 @implementation ABC
 
++ (void)test {
+    NSLog(@"hello boy, i`m a test static framework!");
+}
+
 @end

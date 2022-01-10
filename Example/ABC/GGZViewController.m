@@ -7,7 +7,7 @@
 //
 
 #import "GGZViewController.h"
-
+#import <ABC/ABC.h>
 @interface GGZViewController ()
 
 @end
@@ -17,6 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [ABC test];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 

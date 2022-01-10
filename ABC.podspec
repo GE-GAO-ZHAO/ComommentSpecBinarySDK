@@ -30,7 +30,22 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'ABC/Classes/**/*'
+  if s.version.to_s.include?'Binary' or ENV['IS_BINARY']
+     puts '-------------------------------------------------------------------'
+     puts 'Notice:ABC is binary now'
+     puts '-------------------------------------------------------------------'
+     s.prepare_command = '/bin/bash build_lib.sh'
+     s.source_files = 'Pod/Products/include/**'
+     s.ios.vendored_libraries = 'Pod/Products/lib/*.a'
+     s.public_header_files = 'Pod/Products/include/*.h'
+   else
+     puts '-------------------------------------------------------------------'
+     puts 'Notice:ABC is source code now'
+     puts '-------------------------------------------------------------------'
+     s.source_files = 'ABC/Classes/**/*'
+   end
+ 
+  
   
   # s.resource_bundles = {
   #   'ABC' => ['ABC/Assets/*.png']
