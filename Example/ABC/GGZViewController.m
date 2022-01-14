@@ -7,7 +7,7 @@
 //
 
 #import "GGZViewController.h"
-#import <ABC/ABC.h>
+#import <ABCBinary/ABC.h>
 @interface GGZViewController ()
 
 @end

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ABC'
-  s.version          = '0.1.4'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of ABC.'
 
 # This description is used to generate tags and improve search results.
@@ -34,24 +34,13 @@ TODO: Add long description of the pod here.
      puts '-------------------------------------------------------------------'
      puts 'Notice:ABC is binary now'
      puts '-------------------------------------------------------------------'
-     #s.prepare_command = '/bin/bash build_lib.sh'
-     s.source_files = 'Pod/Products/include/**'
-     s.ios.vendored_libraries = 'Pod/Products/lib/*.a'
-     s.public_header_files = 'Pod/Products/include/*.h'
+     s.prepare_command = '/bin/bash build_lib.sh'
+     s.ios.vendored_frameworks= 'Pod/Products/lib/*.framework'
    else
      puts '-------------------------------------------------------------------'
      puts 'Notice:ABC is source code now'
      puts '-------------------------------------------------------------------'
      s.source_files = 'ABC/Classes/**/*'
    end
- 
-  
-  
-  # s.resource_bundles = {
-  #   'ABC' => ['ABC/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

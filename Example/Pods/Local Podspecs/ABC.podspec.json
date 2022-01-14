@@ -1,6 +1,6 @@
 {
   "name": "ABC",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "A short description of ABC.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/葛高召/ABC",
@@ -9,11 +9,11 @@
     "file": "LICENSE"
   },
   "authors": {
-    "葛高召": "gaozhao.ge@huolala.cn"
+    "葛高召": "gegaozhao1126@gmail.com"
   },
   "source": {
-    "git": "https://github.com/葛高召/ABC.git",
-    "tag": "0.1.0"
+    "git": "git@github.com:GE-GAO-ZHAO/ComommentSpecBinarySDK.git",
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "9.0"
