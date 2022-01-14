@@ -6,6 +6,10 @@
 #  Created by 葛高召 on 2022/1/6.
 #  Copyright © 2022 葛高召. All rights reserved.
 
+echo ///                        ///
+echo /// 🚀开始延迟编译二进制库🚀  ///
+echo ///                       ///
+
 #workspace名、scheme名字
 PROJECT_NAME='ABC'
 BINARY_NAME="${PROJECT_NAME}Binary"
@@ -40,3 +44,7 @@ lipo -create "${DEVICE_DIR}/${BINARY_NAME}" "${SIMULATOR_DIR}/${BINARY_NAME}" -o
 
 #删除编译产物
 rm -dr $WRK_DIR
+
+echo ///                        ///
+echo /// 🚀完成延迟编译二进制库🚀  ///
+echo ///                       ///
