@@ -10,6 +10,19 @@ echo ///                        ///
 echo /// 🚀开始延迟编译二进制库🚀  ///
 echo ///                       ///
 
+echo ====== 😄目录信息😄 ======
+
+path=`cd $(dirname $0);pwd -P`
+echo the current path is:$path
+for i in `ls`
+do
+        echo $i
+done
+filename=`basename $0`
+echo file name is:$filename
+
+echo ====== 😄目录信息😄 ======
+
 #workspace名、scheme名字
 PROJECT_NAME='ABC'
 BINARY_NAME="${PROJECT_NAME}Binary"
