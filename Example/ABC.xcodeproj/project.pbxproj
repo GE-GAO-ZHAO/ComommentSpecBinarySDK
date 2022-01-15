@@ -22,6 +22,10 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		6FD91BCF3BCA8724D698B1A7 /* Pods_ABC_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC68C0191DD4A3A509B548F7 /* Pods_ABC_Example.framework */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		83076E8727929AC600DD2EA7 /* ABC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83076E7F27929AC600DD2EA7 /* ABC.framework */; };
+		83076E8827929AC600DD2EA7 /* ABC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83076E7F27929AC600DD2EA7 /* ABC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		83076E9127929E8500DD2EA7 /* ABC.h in Headers */ = {isa = PBXBuildFile; fileRef = 83076E8F27929E8500DD2EA7 /* ABC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83076E9227929E8500DD2EA7 /* ABC.m in Sources */ = {isa = PBXBuildFile; fileRef = 83076E9027929E8500DD2EA7 /* ABC.m */; };
 		833D1E4627915FE70027A6E6 /* ABC.h in Headers */ = {isa = PBXBuildFile; fileRef = 833D1E4427915FE60027A6E6 /* ABC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		833D1E4727915FE70027A6E6 /* ABC.m in Sources */ = {isa = PBXBuildFile; fileRef = 833D1E4527915FE70027A6E6 /* ABC.m */; };
 		83890C5627915F9F00E023BB /* ABCBinary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83890C4E27915F9F00E023BB /* ABCBinary.framework */; };
@@ -36,6 +40,13 @@
 			containerPortal = 6003F582195388D10070C39A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = ABC;
+		};
+		83076E8527929AC600DD2EA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83076E7E27929AC600DD2EA7;
 			remoteInfo = ABC;
 		};
 		83890C5427915F9F00E023BB /* PBXContainerItemProxy */ = {
@@ -55,6 +66,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				83890C5727915F9F00E023BB /* ABCBinary.framework in Embed Frameworks */,
+				83076E8827929AC600DD2EA7 /* ABC.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -86,6 +98,9 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80FDFFB7F5BEE9A974E3DA33 /* Pods-ABC_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ABC_Example.release.xcconfig"; path = "Target Support Files/Pods-ABC_Example/Pods-ABC_Example.release.xcconfig"; sourceTree = "<group>"; };
+		83076E7F27929AC600DD2EA7 /* ABC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83076E8F27929E8500DD2EA7 /* ABC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABC.h; path = ../../ABC/Classes/ABC.h; sourceTree = "<group>"; };
+		83076E9027929E8500DD2EA7 /* ABC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABC.m; path = ../../ABC/Classes/ABC.m; sourceTree = "<group>"; };
 		833D1E4427915FE60027A6E6 /* ABC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ABC.h; path = ../../ABC/Classes/ABC.h; sourceTree = "<group>"; };
 		833D1E4527915FE70027A6E6 /* ABC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ABC.m; path = ../../ABC/Classes/ABC.m; sourceTree = "<group>"; };
 		83890C4E27915F9F00E023BB /* ABCBinary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ABCBinary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +122,7 @@
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
 				6FD91BCF3BCA8724D698B1A7 /* Pods_ABC_Example.framework in Frameworks */,
 				83890C5627915F9F00E023BB /* ABCBinary.framework in Frameworks */,
+				83076E8727929AC600DD2EA7 /* ABC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +134,13 @@
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
 				C0B75B375BD0E2E438C2ECCE /* Pods_ABC_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83076E7C27929AC600DD2EA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +172,7 @@
 				6003F593195388D20070C39A /* Example for ABC */,
 				6003F5B5195388D20070C39A /* Tests */,
 				83890C4F27915F9F00E023BB /* ABCBinary */,
+				83076E8027929AC600DD2EA7 /* ABC */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
 				585B703347165CC1C5108F5E /* Pods */,
@@ -161,6 +185,7 @@
 				6003F58A195388D20070C39A /* ABC_Example.app */,
 				6003F5AE195388D20070C39A /* ABC_Tests.xctest */,
 				83890C4E27915F9F00E023BB /* ABCBinary.framework */,
+				83076E7F27929AC600DD2EA7 /* ABC.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,6 +259,15 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		83076E8027929AC600DD2EA7 /* ABC */ = {
+			isa = PBXGroup;
+			children = (
+				83076E8F27929E8500DD2EA7 /* ABC.h */,
+				83076E9027929E8500DD2EA7 /* ABC.m */,
+			);
+			path = ABC;
+			sourceTree = "<group>";
+		};
 		83890C4F27915F9F00E023BB /* ABCBinary */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +280,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		83076E7A27929AC600DD2EA7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83076E9127929E8500DD2EA7 /* ABC.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83890C4927915F9F00E023BB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -266,12 +308,13 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				83890C5B27915F9F00E023BB /* Embed Frameworks */,
-				6A7022915384BAEFC603A3C5 /* [CP] Embed Pods Frameworks */,
+				FCD243C9AB5F1CD6F95516CB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				83890C5527915F9F00E023BB /* PBXTargetDependency */,
+				83076E8627929AC600DD2EA7 /* PBXTargetDependency */,
 			);
 			name = ABC_Example;
 			productName = ABC;
@@ -296,6 +339,24 @@
 			productName = ABCTests;
 			productReference = 6003F5AE195388D20070C39A /* ABC_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		83076E7E27929AC600DD2EA7 /* ABC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83076E8B27929AC600DD2EA7 /* Build configuration list for PBXNativeTarget "ABC" */;
+			buildPhases = (
+				83076E7A27929AC600DD2EA7 /* Headers */,
+				83076E7B27929AC600DD2EA7 /* Sources */,
+				83076E7C27929AC600DD2EA7 /* Frameworks */,
+				83076E7D27929AC600DD2EA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ABC;
+			productName = ABC;
+			productReference = 83076E7F27929AC600DD2EA7 /* ABC.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		83890C4D27915F9F00E023BB /* ABCBinary */ = {
 			isa = PBXNativeTarget;
@@ -328,6 +389,10 @@
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
+					83076E7E27929AC600DD2EA7 = {
+						CreatedOnToolsVersion = 13.0;
+						ProvisioningStyle = Automatic;
+					};
 					83890C4D27915F9F00E023BB = {
 						CreatedOnToolsVersion = 13.0;
 						ProvisioningStyle = Automatic;
@@ -351,6 +416,7 @@
 				6003F589195388D20070C39A /* ABC_Example */,
 				6003F5AD195388D20070C39A /* ABC_Tests */,
 				83890C4D27915F9F00E023BB /* ABCBinary */,
+				83076E7E27929AC600DD2EA7 /* ABC */,
 			);
 		};
 /* End PBXProject section */
@@ -372,6 +438,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83076E7D27929AC600DD2EA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,24 +480,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6A7022915384BAEFC603A3C5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ABC_Example/Pods-ABC_Example-frameworks.sh",
-				"${PODS_ROOT}/../../Pod/Products/lib/ABCBinary.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ABCBinary.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ABC_Example/Pods-ABC_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9D48CB4C556976E5D81E074E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -445,6 +500,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCD243C9AB5F1CD6F95516CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ABC_Example/Pods-ABC_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ABC/ABC.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ABC_Example/Pods-ABC_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -468,6 +540,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		83076E7B27929AC600DD2EA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83076E9227929E8500DD2EA7 /* ABC.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83890C4A27915F9F00E023BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -483,6 +563,11 @@
 			isa = PBXTargetDependency;
 			target = 6003F589195388D20070C39A /* ABC_Example */;
 			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+		};
+		83076E8627929AC600DD2EA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83076E7E27929AC600DD2EA7 /* ABC */;
+			targetProxy = 83076E8527929AC600DD2EA7 /* PBXContainerItemProxy */;
 		};
 		83890C5527915F9F00E023BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -674,6 +759,107 @@
 			};
 			name = Release;
 		};
+		83076E8927929AC600DD2EA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 葛高召. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hll.ABC;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		83076E8A27929AC600DD2EA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 葛高召. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hll.ABC;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		83890C5927915F9F00E023BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -801,6 +987,15 @@
 			buildConfigurations = (
 				6003F5C3195388D20070C39A /* Debug */,
 				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83076E8B27929AC600DD2EA7 /* Build configuration list for PBXNativeTarget "ABC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83076E8927929AC600DD2EA7 /* Debug */,
+				83076E8A27929AC600DD2EA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

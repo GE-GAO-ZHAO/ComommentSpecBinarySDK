@@ -27,7 +27,7 @@ cd Example
 
 #workspace名、scheme名字
 PROJECT_NAME='ABC'
-BINARY_NAME="${PROJECT_NAME}Binary"
+BINARY_NAME="${PROJECT_NAME}"
 
 #删除之前的framework产物
 INSTALL_DIR=$PWD/../Pod/Products
