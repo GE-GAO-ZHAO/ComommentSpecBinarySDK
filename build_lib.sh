@@ -23,6 +23,8 @@ echo file name is:$filename
 
 echo ====== 😄目录信息😄 ======
 
+cd Example
+
 #workspace名、scheme名字
 PROJECT_NAME='ABC'
 BINARY_NAME="${PROJECT_NAME}Binary"
@@ -33,7 +35,6 @@ rm -dr "${INSTALL_DIR}"
 mkdir $INSTALL_DIR
 
 #编译场地
-cd Example
 WRK_DIR=build
 BUILD_PATH=${WRK_DIR}
 DEVICE_DIR=${BUILD_PATH}/Release-iphoneos/${BINARY_NAME}.framework
