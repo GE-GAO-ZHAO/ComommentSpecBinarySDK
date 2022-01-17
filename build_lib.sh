@@ -10,27 +10,32 @@ echo ///                        ///
 echo /// 🚀开始延迟编译二进制库🚀  ///
 echo ///                       ///
 
-echo ====== 😄目录信息😄 ======
+printCurDirInfo() {
+    echo ====== 😄目录信息😄 ======
+    path=`cd $(dirname $0);pwd -P`
+    echo the current path is:$path
+    for i in `ls`
+    do
+            echo $i
+    done
+    filename=`basename $0`
+    echo file name is:$filename
+    echo ====== 😄目录信息😄 ======
+}
 
-path=`cd $(dirname $0);pwd -P`
-echo the current path is:$path
-for i in `ls`
-do
-        echo $i
-done
-filename=`basename $0`
-echo file name is:$filename
+#脚本所在目录
+printCurDirInfo
 
-echo ====== 😄目录信息😄 ======
-
+#进入工程根目录
 cd Example
+printCurDirInfo
 
 #workspace名、scheme名字
 PROJECT_NAME='ABC'
 BINARY_NAME="${PROJECT_NAME}"
 
-#删除之前的framework产物
-INSTALL_DIR=../Pod/Products
+#framework路径
+INSTALL_DIR=../PodProducts
 rm -dr "${INSTALL_DIR}"
 mkdir $INSTALL_DIR
 
@@ -47,7 +52,8 @@ xcodebuild -configuration "Release" -workspace "${PROJECT_NAME}.xcworkspace" -sc
 xcodebuild -configuration "Release" -workspace "${PROJECT_NAME}.xcworkspace" -scheme "${BINARY_NAME}" ONLY_ACTIVE_ARCH=NO ARCHS='i386 x86_64' VALID_ARCHS='i386 x86_64' -sdk iphonesimulator CONFIGURATION_BUILD_DIR="${WRK_DIR}/${RE_SIMULATOR}" clean build
 
 #合成fat库
-INSTALL_LIB_DIR=${INSTALL_DIR}/lib/${BINARY_NAME}.framework
+printCurDirInfo
+INSTALL_LIB_DIR=${INSTALL_DIR}/${BINARY_NAME}.framework
 if [ -d "${INSTALL_LIB_DIR}" ]
 then
 rm -rf "${INSTALL_LIB_DIR}"

@@ -35,8 +35,7 @@ TODO: Add long description of the pod here.
      puts 'Notice:ABC is binary now'
      puts '-------------------------------------------------------------------'
      s.prepare_command = '/bin/bash build_lib.sh'
-     s.static_framework = true
-     s.ios.vendored_frameworks= 'Pod/Products/lib/*.framework'
+     s.ios.vendored_frameworks= 'PodProducts/*.framework'
    else
      puts '-------------------------------------------------------------------'
      puts 'Notice:ABC is source code now'
