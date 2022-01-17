@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ABC'
-  s.version          = '0.2.0'
+  s.version          = '0.2.1'
   s.summary          = 'A short description of ABC.'
 
 # This description is used to generate tags and improve search results.
@@ -35,11 +35,13 @@ TODO: Add long description of the pod here.
      puts 'Notice:ABC is binary now'
      puts '-------------------------------------------------------------------'
      s.prepare_command = '/bin/bash build_lib.sh'
+     s.static_framework = true
      s.ios.vendored_frameworks= 'Pod/Products/lib/*.framework'
    else
      puts '-------------------------------------------------------------------'
      puts 'Notice:ABC is source code now'
      puts '-------------------------------------------------------------------'
+     s.static_framework = false
      s.source_files = 'ABC/Classes/**/*'
    end
 
