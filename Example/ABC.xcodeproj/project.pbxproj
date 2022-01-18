@@ -24,7 +24,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		83076E8727929AC600DD2EA7 /* ABC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83076E7F27929AC600DD2EA7 /* ABC.framework */; };
 		83076E8827929AC600DD2EA7 /* ABC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 83076E7F27929AC600DD2EA7 /* ABC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		837F16412796A002001ECE05 /* ABC.h in Headers */ = {isa = PBXBuildFile; fileRef = 837F163F2796A002001ECE05 /* ABC.h */; };
+		837F16412796A002001ECE05 /* ABC.h in Headers */ = {isa = PBXBuildFile; fileRef = 837F163F2796A002001ECE05 /* ABC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		837F16422796A002001ECE05 /* ABC.m in Sources */ = {isa = PBXBuildFile; fileRef = 837F16402796A002001ECE05 /* ABC.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		C0B75B375BD0E2E438C2ECCE /* Pods_ABC_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E6011FECC3EAE7132FFF75 /* Pods_ABC_Tests.framework */; };
@@ -266,7 +266,6 @@
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
 				83890C5B27915F9F00E023BB /* Embed Frameworks */,
-				4125B8E67405899E6313E8D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -385,24 +384,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4125B8E67405899E6313E8D6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ABC_Example/Pods-ABC_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ABC/ABC.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ABC.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ABC_Example/Pods-ABC_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		67E1DCD0CA20B08A6592280F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

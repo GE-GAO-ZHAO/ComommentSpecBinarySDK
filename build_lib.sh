@@ -45,7 +45,7 @@ else
 fi
 
 #编译场地
-BUILD_PATH="build"
+BUILD_PATH=../build
 RE_OS="Release-iphoneos"
 RE_SIMULATOR="Release-iphonesimulator"
 DEVICE_DIR_FOLDER=${BUILD_PATH}/${RE_OS}
@@ -69,9 +69,11 @@ else
     exit
 fi
 
-#兼容打包问题
-if [ -d "./Pods/" ];then
-   SIMULATOR_DIR="./Pods/${SIMULATOR_DIR}/"
+if [ -d "./${SIMULATOR_DIR}/" ];then
+    echo "exist ${SIMULATOR_DIR}"
+else
+    echo "termination | reason: not exist ${SIMULATOR_DIR}"
+    exit
 fi
 
 #合成fat库
@@ -82,10 +84,10 @@ rm -rf "${INSTALL_LIB_DIR}"
 fi
 mkdir -p "${INSTALL_LIB_DIR}"
 cp -a "${DEVICE_DIR}/" "${INSTALL_LIB_DIR}/"
-lipo -create "${DEVICE_DIR}/${BINARY_NAME}" "./Pods/${SIMULATOR_DIR}/${BINARY_NAME}" -output "${INSTALL_LIB_DIR}/${BINARY_NAME}"
+lipo -create "${DEVICE_DIR}/${BINARY_NAME}" "${SIMULATOR_DIR}/${BINARY_NAME}" -output "${INSTALL_LIB_DIR}/${BINARY_NAME}"
 
 #删除编译产物
-rm -rf $BUILD_PATH
+#rm -rf $BUILD_PATH
 
 echo ///                        ///
 echo /// 🚀完成延迟编译二进制库🚀  ///
