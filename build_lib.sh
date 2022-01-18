@@ -45,13 +45,13 @@ else
 fi
 
 #编译场地
-BUILD_PATH="../build"
+BUILD_PATH="${CURRENT_DIR1}/build"
 RE_OS="Release-iphoneos"
 RE_SIMULATOR="Release-iphonesimulator"
-DEVICE_DIR_FOLDER=${BUILD_PATH}/${RE_OS}
-SIMULATOR_DIR_FOLDER=${BUILD_PATH}/${RE_SIMULATOR}
-DEVICE_DIR=${DEVICE_DIR_FOLDER}/${BINARY_NAME}.framework
-SIMULATOR_DIR=${SIMULATOR_DIR_FOLDER}/${BINARY_NAME}.framework
+DEVICE_DIR_FOLDER="${BUILD_PATH}/${RE_OS}"
+SIMULATOR_DIR_FOLDER="${BUILD_PATH}/${RE_SIMULATOR}"
+DEVICE_DIR="${DEVICE_DIR_FOLDER}/${BINARY_NAME}.framework"
+SIMULATOR_DIR="${SIMULATOR_DIR_FOLDER}/${BINARY_NAME}.framework"
 echo ======😂😂😂编译场地信息😂😂😂=========
 CURRENT_DIR2=$(cd `dirname $0`; pwd)
 echo "CURRENT_DIR: ${CURRENT_DIR2}"
@@ -70,14 +70,14 @@ echo ======😂😂😂目录信息😂😂😂=========
 read_dir ../
 echo ======😂😂😂目录信息😂😂😂=========
 
-if [ -d "./${DEVICE_DIR}/" ];then
+if [ -d "${DEVICE_DIR}/" ];then
     echo "exist ${DEVICE_DIR}"
 else
     echo "termination | reason: not exist ${DEVICE_DIR}"
     exit
 fi
 
-if [ -d "./${SIMULATOR_DIR}/" ];then
+if [ -d "${SIMULATOR_DIR}/" ];then
     echo "exist ${SIMULATOR_DIR}"
 else
     echo "termination | reason: not exist ${SIMULATOR_DIR}"
