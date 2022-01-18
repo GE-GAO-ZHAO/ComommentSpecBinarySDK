@@ -45,13 +45,22 @@ else
 fi
 
 #编译场地
-BUILD_PATH=../build
+BUILD_PATH="../build"
 RE_OS="Release-iphoneos"
 RE_SIMULATOR="Release-iphonesimulator"
 DEVICE_DIR_FOLDER=${BUILD_PATH}/${RE_OS}
 SIMULATOR_DIR_FOLDER=${BUILD_PATH}/${RE_SIMULATOR}
 DEVICE_DIR=${DEVICE_DIR_FOLDER}/${BINARY_NAME}.framework
 SIMULATOR_DIR=${SIMULATOR_DIR_FOLDER}/${BINARY_NAME}.framework
+echo ======😂😂😂编译场地信息😂😂😂=========
+CURRENT_DIR2=$(cd `dirname $0`; pwd)
+echo "CURRENT_DIR: ${CURRENT_DIR2}"
+echo "BUILD_PATH: ${BUILD_PATH}"
+echo "DEVICE_DIR_FOLDER: ${DEVICE_DIR_FOLDER}"
+echo "SIMULATOR_DIR_FOLDER: ${SIMULATOR_DIR_FOLDER}"
+echo "DEVICE_DIR: ${DEVICE_DIR}"
+echo "SIMULATOR_DIR: ${SIMULATOR_DIR}"
+echo ======😂😂😂编译场地信息😂😂😂=========
 
 #分别编译模拟器和真机的Framework
 xcodebuild -configuration "Release" -workspace "${PROJECT_NAME}.xcworkspace" -scheme "${BINARY_NAME}" ONLY_ACTIVE_ARCH=NO -sdk iphoneos CONFIGURATION_BUILD_DIR="${DEVICE_DIR_FOLDER}" clean build
