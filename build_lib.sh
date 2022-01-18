@@ -69,11 +69,9 @@ else
     exit
 fi
 
-if [ -d "./Pods/${SIMULATOR_DIR}/" ];then
-    echo "exist ./Pods/${SIMULATOR_DIR}/"
-else
-    echo "termination | reason: not exist ./Pods/${SIMULATOR_DIR}/"
-    exit
+#兼容打包问题
+if [ -d "./Pods/" ];then
+   SIMULATOR_DIR="./Pods/${SIMULATOR_DIR}/"
 fi
 
 #合成fat库
