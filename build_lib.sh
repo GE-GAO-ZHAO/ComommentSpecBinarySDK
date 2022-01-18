@@ -54,8 +54,8 @@ DEVICE_DIR=${DEVICE_DIR_FOLDER}/${BINARY_NAME}.framework
 SIMULATOR_DIR=${SIMULATOR_DIR_FOLDER}/${BINARY_NAME}.framework
 
 #分别编译模拟器和真机的Framework
-xcodebuild -configuration "Release" -workspace "${PROJECT_NAME}.xcworkspace" -scheme "${BINARY_NAME}" ONLY_ACTIVE_ARCH=NO -sdk iphoneos CONFIGURATION_BUILD_DIR="${DEVICE_DIR_FOLDER}" clean build
-xcodebuild -configuration "Release" -workspace "${PROJECT_NAME}.xcworkspace" -scheme "${BINARY_NAME}" ONLY_ACTIVE_ARCH=NO ARCHS='i386 x86_64' VALID_ARCHS='i386 x86_64' -sdk iphonesimulator CONFIGURATION_BUILD_DIR="${SIMULATOR_DIR_FOLDER}" clean build
+xcodebuild -configuration "Release" -workspace "${PROJECT_NAME}.xcworkspace" -scheme "${BINARY_NAME}" ONLY_ACTIVE_ARCH=NO -sdk iphoneos BUILD_DIR="${DEVICE_DIR_FOLDER}" clean build
+xcodebuild -configuration "Release" -workspace "${PROJECT_NAME}.xcworkspace" -scheme "${BINARY_NAME}" ONLY_ACTIVE_ARCH=NO ARCHS='i386 x86_64' VALID_ARCHS='i386 x86_64' -sdk iphonesimulator BUILD_DIR="${SIMULATOR_DIR_FOLDER}" clean build
 
 echo ======😂😂😂目录信息😂😂😂=========
 CURRENT_DIR2=$(cd `dirname $0`; pwd)
