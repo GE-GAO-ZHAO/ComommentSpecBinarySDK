@@ -54,12 +54,11 @@ DEVICE_DIR=${DEVICE_DIR_FOLDER}/${BINARY_NAME}.framework
 SIMULATOR_DIR=${SIMULATOR_DIR_FOLDER}/${BINARY_NAME}.framework
 
 #分别编译模拟器和真机的Framework
-xcodebuild -configuration "Release" -workspace "${PROJECT_NAME}.xcworkspace" -scheme "${BINARY_NAME}" ONLY_ACTIVE_ARCH=NO -sdk iphoneos BUILD_DIR="${DEVICE_DIR_FOLDER}" clean build
-xcodebuild -configuration "Release" -workspace "${PROJECT_NAME}.xcworkspace" -scheme "${BINARY_NAME}" ONLY_ACTIVE_ARCH=NO ARCHS='i386 x86_64' VALID_ARCHS='i386 x86_64' -sdk iphonesimulator BUILD_DIR="${SIMULATOR_DIR_FOLDER}" clean build
+xcodebuild -configuration "Release" -workspace "${PROJECT_NAME}.xcworkspace" -scheme "${BINARY_NAME}" ONLY_ACTIVE_ARCH=NO -sdk iphoneos CONFIGURATION_BUILD_DIR="${DEVICE_DIR_FOLDER}" clean build
+xcodebuild -configuration "Release" -workspace "${PROJECT_NAME}.xcworkspace" -scheme "${BINARY_NAME}" ONLY_ACTIVE_ARCH=NO ARCHS='i386 x86_64' VALID_ARCHS='i386 x86_64' -sdk iphonesimulator CONFIGURATION_BUILD_DIR="${SIMULATOR_DIR_FOLDER}" clean build
 
 echo ======😂😂😂目录信息😂😂😂=========
-CURRENT_DIR2=$(cd `dirname $0`; pwd)
-read_dir $CURRENT_DIR2
+read_dir ../
 echo ======😂😂😂目录信息😂😂😂=========
 
 if [ -d "./${DEVICE_DIR}/" ];then
@@ -87,7 +86,7 @@ cp -a "${DEVICE_DIR}/" "${INSTALL_LIB_DIR}/"
 lipo -create "${DEVICE_DIR}/${BINARY_NAME}" "${SIMULATOR_DIR}/${BINARY_NAME}" -output "${INSTALL_LIB_DIR}/${BINARY_NAME}"
 
 #删除编译产物
-#rm -rf $BUILD_PATH
+rm -rf $BUILD_PATH
 
 echo ///                        ///
 echo /// 🚀完成延迟编译二进制库🚀  ///
