@@ -10,8 +10,22 @@ echo ///                        ///
 echo /// 🚀开始延迟编译二进制库🚀  ///
 echo ///                       ///
 
-#进入工程根目录
-cd Example
+read_dir() {
+    for file in `ls $1`
+    do
+    if [ -d $1"/"$file ]
+    then
+    read_dir $1"/"$file
+    else
+    echo $1"/"$file
+    fi
+    done
+}
+
+echo ======😂😂😂目录信息😂😂😂=========
+CURRENT_DIR1=$(cd `dirname $0`; pwd)
+read_dir $CURRENT_DIR1
+echo ======😂😂😂目录信息😂😂😂=========
 
 #workspace名、scheme名字
 PROJECT_NAME='ABC'
@@ -23,8 +37,10 @@ cd Example
 #framework路径
 INSTALL_DIR=../PodProducts
 if [ -d ${INSTALL_DIR} ];then
+    echo "移除framework缓存  $INSTALL_DIR"
     rm -rf ${INSTALL_DIR}
 else
+    echo "创建framework路径  $INSTALL_DIR"
     mkdir -p $INSTALL_DIR
 fi
 
@@ -40,6 +56,11 @@ SIMULATOR_DIR=${SIMULATOR_DIR_FOLDER}/${BINARY_NAME}.framework
 #分别编译模拟器和真机的Framework
 xcodebuild -configuration "Release" -workspace "${PROJECT_NAME}.xcworkspace" -scheme "${BINARY_NAME}" ONLY_ACTIVE_ARCH=NO -sdk iphoneos CONFIGURATION_BUILD_DIR="${DEVICE_DIR_FOLDER}" clean build
 xcodebuild -configuration "Release" -workspace "${PROJECT_NAME}.xcworkspace" -scheme "${BINARY_NAME}" ONLY_ACTIVE_ARCH=NO ARCHS='i386 x86_64' VALID_ARCHS='i386 x86_64' -sdk iphonesimulator CONFIGURATION_BUILD_DIR="${SIMULATOR_DIR_FOLDER}" clean build
+
+echo ======😂😂😂目录信息😂😂😂=========
+CURRENT_DIR2=$(cd `dirname $0`; pwd)
+read_dir $CURRENT_DIR2
+echo ======😂😂😂目录信息😂😂😂=========
 
 if [ -d "./${DEVICE_DIR}/" ];then
     echo "exist ${DEVICE_DIR}"
