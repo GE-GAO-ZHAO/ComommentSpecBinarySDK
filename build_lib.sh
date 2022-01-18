@@ -69,10 +69,10 @@ else
     exit
 fi
 
-if [ -d "./${SIMULATOR_DIR}/" ];then
-    echo "exist ${SIMULATOR_DIR}"
+if [ -d "./Pods/${SIMULATOR_DIR}/" ];then
+    echo "exist ./Pods/${SIMULATOR_DIR}/"
 else
-    echo "termination | reason: not exist ${SIMULATOR_DIR}"
+    echo "termination | reason: not exist ./Pods/${SIMULATOR_DIR}/"
     exit
 fi
 
@@ -84,7 +84,7 @@ rm -rf "${INSTALL_LIB_DIR}"
 fi
 mkdir -p "${INSTALL_LIB_DIR}"
 cp -a "${DEVICE_DIR}/" "${INSTALL_LIB_DIR}/"
-lipo -create "${DEVICE_DIR}/${BINARY_NAME}" "${SIMULATOR_DIR}/${BINARY_NAME}" -output "${INSTALL_LIB_DIR}/${BINARY_NAME}"
+lipo -create "${DEVICE_DIR}/${BINARY_NAME}" "./Pods/${SIMULATOR_DIR}/${BINARY_NAME}" -output "${INSTALL_LIB_DIR}/${BINARY_NAME}"
 
 #删除编译产物
 rm -rf $BUILD_PATH
