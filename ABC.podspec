@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ABC'
-  s.version          = '0.3.9'
+  s.version          = '0.4.0'
   s.summary          = 'A short description of ABC.'
 
 # This description is used to generate tags and improve search results.
@@ -29,6 +29,8 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
+  
+  s.dependency 'UsualTool', '0.0.4'
 
   if s.version.to_s.include?'Binary' or ENV['IS_BINARY']
      puts '-------------------------------------------------------------------'
