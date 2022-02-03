@@ -11,6 +11,7 @@
 
 + (void)test {
     NSLog(@"hello boy, i`m a test static framework!");
+    NSLog(@"hello i from UsualTool. des: %@",[HLLClientDeciceTool deviceName]);
 }
 
 @end
